@@ -1,0 +1,48 @@
+.fs-experience_bar{
+    width: 100%;
+    background-color: $color-accent;
+    padding: 20px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    &_content{
+        width: 50%;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        &-item{
+            width: 50%;
+            font-size: 20px;
+            color: $color-white;
+            text-align: center;
+            &-text{
+                padding: 0 20px;
+            }
+            &--border_l{
+                border-left: 2px solid $color-white;
+            }
+        }
+        &:first-child{
+            border-right: 2px solid $color-white;
+        }
+    }
+}
+
+@include mobile{
+    .fs-experience_bar{
+        flex-direction: column;
+        padding: 10px;
+        &_content{
+            width: 100%;
+            padding: 20px;
+            &-item{
+                width: 50%;
+                font-size: 14px;
+            }
+            &:first-child{
+            border-right: none;
+        }
+        }
+    }
+
+}

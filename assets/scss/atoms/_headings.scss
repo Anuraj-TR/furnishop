@@ -1,0 +1,31 @@
+.fs{
+    color: $color-primary;
+    text-transform: capitalize;
+    &-h1{
+        font-size: 64px;
+        font-weight: $font-semi-bold;
+        color: $color-white;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    &-h2{
+        font-size: 40px;
+        font-weight: $font-semi-bold;
+        margin-bottom: 20px;
+        &--white{
+            color: $color-white;
+        }
+    }
+    
+}
+
+@include mobile{
+    .fs{
+        &-h1{
+        font-size: 24px;
+    }
+    &-h2{
+        font-size: 24px;
+    }
+    }
+}
