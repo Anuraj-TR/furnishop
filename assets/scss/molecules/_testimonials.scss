@@ -1,0 +1,58 @@
+.fs-testimonials{
+    width: 100%;
+    &-tile{
+        width: 100%;
+        max-width: 600px;
+        &__profile{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+            &__image{
+                width: 100%;
+                height: auto;
+                max-width: 80px;
+                max-height: 80px;
+                margin-right: 1rem;
+            }
+            &__detail{
+                padding: 12px 0;
+                width: 100%;
+                &-name{
+                    font-size: 20px;
+                    font-weight: $font-semi-bold;
+                    margin-bottom: 0.5rem;
+                }
+                &-designation{
+                    font-size: 14px;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@include mobile{
+    .fs-testimonials{
+        &-tile{
+            &__profile{
+                margin-bottom: 15px;
+                &__image{
+                    max-width: 40px;
+                    max-height: 40px;
+                }
+                &__detail{
+                    &-name{
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+                    &-designation{
+                        font-size: 10px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
