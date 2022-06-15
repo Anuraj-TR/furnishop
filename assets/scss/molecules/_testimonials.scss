@@ -1,5 +1,8 @@
 .fs-testimonials{
     width: 100%;
+    position: relative;
+    display: flex;
+    max-width: 600px;
     &-tile{
         width: 100%;
         max-width: 600px;
@@ -31,8 +34,49 @@
             }
         }
     }
+    &__carousel{
+        position: relative;
+
+        .slick-prev, .slick-next{
+            position: absolute;
+            background-color: transparent;
+            top: 120%;
+            width: 50px;
+            height: 50px;
+            padding: 13px;
+            border-radius: 25px;
+        }
+
+        .slick-prev{
+            left: 0;
+            &::before{
+                content: url("data:image/svg+xml,%3Csvg  viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_210_624)'%3E%3Cpath d='M24 12C24 13.1063 23.2807 14 22.3306 14H5.86694L11.5248 20.5875C12.1958 21.3687 12.1958 22.6344 11.5248 23.4156C11.1866 23.8062 10.7464 24 10.3063 24C9.86609 24 9.42699 23.8047 9.09203 23.4141L0.503249 13.4141C-0.16775 12.6328 -0.16775 11.3672 0.503249 10.5859L9.09203 0.585938C9.76303 -0.195312 10.85 -0.195312 11.521 0.585938C12.192 1.36719 12.192 2.63281 11.521 3.41406L5.86694 10H22.3306C23.2807 10 24 10.8937 24 12Z' fill='%2323262F'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_210_624'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+            }
+            &:hover{
+                background-color: $color-accent;
+                &::before{
+                    content: url("data:image/svg+xml,%3Csvg  viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_210_624)'%3E%3Cpath d='M24 12C24 13.1063 23.2807 14 22.3306 14H5.86694L11.5248 20.5875C12.1958 21.3687 12.1958 22.6344 11.5248 23.4156C11.1866 23.8062 10.7464 24 10.3063 24C9.86609 24 9.42699 23.8047 9.09203 23.4141L0.503249 13.4141C-0.16775 12.6328 -0.16775 11.3672 0.503249 10.5859L9.09203 0.585938C9.76303 -0.195312 10.85 -0.195312 11.521 0.585938C12.192 1.36719 12.192 2.63281 11.521 3.41406L5.86694 10H22.3306C23.2807 10 24 10.8937 24 12Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_210_624'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");;
+                    
+                }
+            }
+        }
+        .slick-next{
+            left: 10%;
+            &::before{
+                content: url("data:image/svg+xml,%3Csvg  viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-0.000188828 12C-0.000188828 10.8937 0.719111 10 1.66921 10L18.1329 10L12.475 3.4125C11.804 2.6313 11.804 1.3656 12.475 0.584402C12.8132 0.193802 13.2534 1.90735e-06 13.6935 1.90735e-06C14.1337 1.90735e-06 14.5728 0.195301 14.9078 0.585901L23.4966 10.5859C24.1676 11.3672 24.1676 12.6328 23.4966 13.4141L14.9078 23.4141C14.2368 24.1953 13.1498 24.1953 12.4788 23.4141C11.8078 22.6328 11.8078 21.3672 12.4788 20.5859L18.1329 14L1.66921 14C0.719111 14 -0.000188828 13.1063 -0.000188828 12Z' fill='%2323262F'/%3E%3C/svg%3E%0A");
+            }
+            &:hover{
+                background-color: $color-accent;
+                &::before{
+                    content: url("data:image/svg+xml,%3Csvg  viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_210_624)'%3E%3Cpath d='M-0.000188828 12C-0.000188828 10.8937 0.719111 10 1.66921 10L18.1329 10L12.475 3.4125C11.804 2.6313 11.804 1.3656 12.475 0.584402C12.8132 0.193802 13.2534 1.90735e-06 13.6935 1.90735e-06C14.1337 1.90735e-06 14.5728 0.195301 14.9078 0.585901L23.4966 10.5859C24.1676 11.3672 24.1676 12.6328 23.4966 13.4141L14.9078 23.4141C14.2368 24.1953 13.1498 24.1953 12.4788 23.4141C11.8078 22.6328 11.8078 21.3672 12.4788 20.5859L18.1329 14L1.66921 14C0.719111 14 -0.000188828 13.1063 -0.000188828 12Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_210_624'%3E%3Crect width='24' height='24' fill='white' transform='translate(23.9998 24) rotate(-180)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+    }
+
 }
 
+    
 @include mobile{
     .fs-testimonials{
         &-tile{
@@ -52,6 +96,22 @@
                         margin-bottom: 0;
                     }
                 }
+            }
+        }
+        &__carousel{
+        position: relative;
+        .slick-prev, .slick-next{
+                width: 36px;
+                height: 36px;
+                padding: 10px;
+            }
+            .slick-prev{
+                left: unset;
+                right: 80px;
+            }
+            .slick-next{
+                left: unset;
+                right: 15px;
             }
         }
     }
