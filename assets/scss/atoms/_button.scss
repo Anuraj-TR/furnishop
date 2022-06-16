@@ -1,0 +1,38 @@
+.fs-button{
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 9px 15px;
+    border: 1px solid $color-primary;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+    &:hover{
+        background-color: $color-white;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        transition: 0.3s;
+    }
+    &--filtered{
+        background-color: #e2e2e266;
+        backdrop-filter: blur(30px);
+        border: none;
+        padding: 16px 80px;
+        &:hover{
+            border: none;
+            background-color: #e2e2e266;
+            color: $color-white;
+        }
+    }
+}
+
+@include mobile{
+    .fs-button{
+        padding: 7px 12px;
+        font-size: 14px;
+        &--filtered{
+            padding: 9px 35px;
+            font-size: 14px;
+        }
+    }
+}
