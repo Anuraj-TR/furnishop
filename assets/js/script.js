@@ -1,3 +1,5 @@
+
+// testimonial slider script
 $(".fs-testimonials__carousel").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -7,6 +9,8 @@ $(".fs-testimonials__carousel").slick({
   infinite: true,
   
 });
+
+// store content script
 $(".fs-store_content__gallery").slick({
   slidesToShow: 3,
   slidesToScroll: 1,

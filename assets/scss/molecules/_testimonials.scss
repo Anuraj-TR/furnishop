@@ -79,6 +79,7 @@
     
 @include mobile{
     .fs-testimonials{
+        margin-bottom: 40px;
         &-tile{
             &__profile{
                 margin-bottom: 15px;
@@ -108,11 +109,58 @@
             .slick-prev{
                 left: unset;
                 right: 80px;
+                top: 130px !important;
+                z-index: 999;
             }
             .slick-next{
                 left: unset;
                 right: 15px;
+                top: 130px !important;
             }
         }
     }
 }
+@include tablet{
+    .fs-testimonials{
+        margin-bottom: 40px;
+        &-tile{
+            &__profile{
+                margin-bottom: 15px;
+                &__image{
+                    max-width: 60px;
+                    max-height: 60px;
+                }
+                &__detail{
+                    &-name{
+                        font-size: 18px;
+                        margin-bottom: 0;
+                    }
+                    &-designation{
+                        font-size: 12px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &__carousel{
+        position: relative;
+        .slick-prev, .slick-next{
+                width: 36px;
+                height: 36px;
+                padding: 10px;
+            }
+            .slick-prev{
+                left: unset;
+                right: 80px;
+                top: 130px !important;
+                z-index: 999;
+            }
+            .slick-next{
+                left: unset;
+                right: 15px;
+                top: 130px !important;
+            }
+        }
+    }
+}
+
