@@ -51,3 +51,26 @@ $(".fs-store_content__gallery").slick({
     },
   ],
 });
+
+// header mobile menu toggle
+const hamburger = document.querySelector("[data-hamburger]");
+const header = document.querySelector(".fs-header");
+
+const mobileMenuTrigger = () => {
+  const nav = document.querySelector(".fs-header__nav");
+  nav.classList.toggle("fs-header__nav--show");
+  nav.classList.contains("fs-header__nav--show")
+    ? hamburger.classList.add("fs-header__hamburger--open")
+    : hamburger.classList.remove("fs-header__hamburger--open");
+};
+
+hamburger.addEventListener("click", mobileMenuTrigger);
+
+// change header background on scroll
+const changeHeaderBackground = (e) => {
+  window.scrollY > 0
+    ? header.classList.add("fs-header--scrolled")
+    : header.classList.remove("fs-header--scrolled");
+};
+
+window.addEventListener("scroll", changeHeaderBackground);
