@@ -1,0 +1,76 @@
+.fs-product {
+  padding-bottom: $spacer-3;
+  cursor: pointer;
+  &__head {
+    position: relative;
+    border: 1px solid $color-grey;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__add-to-cart {
+    position: absolute;
+    right: $spacer-3;
+    bottom: $spacer-3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(217, 217, 217);
+    transition: background 0.3s ease;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    &:hover {
+      background: $color-primary;
+      svg path {
+        stroke: $color-white;
+      }
+    }
+  }
+  &__name {
+    font-size: 20px;
+    font-weight: $font-semi-bold;
+    padding-top: $spacer-3;
+    padding-bottom: $spacer-2;
+  }
+  &__price {
+    display: inline-block;
+    font-size: 15px;
+
+    &--original {
+      position: relative;
+      font-size: 14px;
+      opacity: 0.7;
+      margin-left: $spacer-3;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -3px;
+        right: -3px;
+        height: 0.7px;
+        background: $color-primary;
+        opacity: 0.7;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .fs-product {
+    &__name {
+      font-size: 17px;
+    }
+  }
+}

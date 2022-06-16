@@ -66,6 +66,11 @@ button {
   display: none;
 }
 
+.fs-background {
+  padding-top: $spacer-6;
+  padding-bottom: $spacer-6;
+}
+
 @include mobile-tablet {
   .content-wrapper {
     padding-left: $spacer-5;
@@ -78,6 +83,11 @@ button {
 
   .only-mobile-tablet {
     display: block;
+  }
+
+  .fs-background {
+    padding-top: $spacer-5;
+    padding-bottom: $spacer-5;
   }
 }
 
@@ -93,5 +103,10 @@ button {
 
   .only-mobile {
     display: block;
+  }
+
+  .fs-background {
+    padding-top: $spacer-3;
+    padding-bottom: $spacer-3;
   }
 }
