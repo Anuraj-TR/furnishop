@@ -1,0 +1,52 @@
+.fs-hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  &__lead-text {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__lead-desc {
+    line-height: 1.5;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    color: $color-white;
+  }
+}
+
+@include mobile-tablet {
+  .fs-hero {
+    &__lead-text {
+      font-size: 50px;
+      max-width: 700px;
+    }
+    &__lead-desc {
+      max-width: 400px;
+      color: $color-white;
+    }
+  }
+}
+
+@include mobile {
+  .fs-hero {
+    &__lead-text {
+      font-size: 35px;
+      max-width: 500px;
+    }
+    &__lead-desc {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+}
