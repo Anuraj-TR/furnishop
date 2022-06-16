@@ -10,6 +10,9 @@
 // atoms
 @import "./atoms/headings";
 @import "./atoms/valuation";
+@import "./atoms/input";
+@import "./atoms/button";
+@import "atoms/gallery-item";
 
 // molecule
 @import "molecules/experience_bar";
@@ -17,8 +20,10 @@
 
 // organisms
 @import "./organisms/your_choice";
-@import "./organisms/all-products";
+@import "organisms/get_discount";
+@import "organisms/all-products";
 @import "molecules/testimonials";
+@import "organisms/footer";
 
 // organisms
 @import "organisms/your_choice";

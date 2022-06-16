@@ -1,0 +1,57 @@
+.discount{
+    background-image: url('/assets/images/Rectangle\ 928.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0;
+    &__contents{
+        // width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        &__text{
+            text-align: left;
+            p{
+                color: $color-white;
+                font-size: 16px;
+            }
+        }
+        &__form{
+            padding: 20px 0;
+        }
+    }   
+}
+
+@include mobile{
+    .discount{
+        background-size: cover;
+        background-position: 80%;
+        padding: 40px 0;
+        &__contents{
+            justify-content: center;
+            &__text{
+                text-align: center;
+                p{
+                    color: $color-white;
+                    font-size: 16px;
+                }
+            }
+        }   
+    }
+}
+
+@include tablet{
+    .discount{
+        background-size: cover;
+        background-position: 80%;
+        padding: 40px 0;
+        &__contents{
+            justify-content: flex-end;
+            &__text{
+                text-align: left;
+                p{
+                    color: $color-white;
+                    font-size: 16px;
+                }
+            }
+        }   
+    }
+}
