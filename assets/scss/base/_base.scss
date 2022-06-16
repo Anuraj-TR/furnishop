@@ -92,6 +92,10 @@ button {
 }
 
 @include mobile {
+  body,
+  html{
+    font-size: 14px;
+  }
   .content-wrapper {
     padding-left: $spacer-3;
     padding-right: $spacer-3;
