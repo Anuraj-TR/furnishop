@@ -1,17 +1,18 @@
 // base
-@import "./base/colors";
-@import "./base/fonts";
-@import "./base/layout";
-@import "./base/breakpoints";
-@import "./base/reset";
-@import "./base/base";
-@import "./base/dev";
+@import "base/colors";
+@import "base/fonts";
+@import "base/layout";
+@import "base/breakpoints";
+@import "base/reset";
+@import "base/base";
+@import "base/dev";
 
 // atoms
-@import "./atoms/headings";
-@import "./atoms/valuation";
-@import "./atoms/input";
-@import "./atoms/button";
+@import "atoms/headings";
+@import "atoms/valuation";
+@import "atoms/input";
+@import "atoms/button";
+@import "atoms/gallery-item";
 
 // molecule
 @import "molecules/experience_bar";
@@ -19,12 +20,16 @@
 @import "molecules/testimonials";
 
 // organisms
-@import "./organisms/hero";
-@import "./organisms/header";
-@import "./organisms/your_choice";
-@import "./organisms/get_discount";
-@import "./organisms/all-products";
-
+@import "organisms/footer";
+@import "organisms/hero";
+@import "organisms/header";
+@import "organisms/your_choice";
+@import "organisms/get_discount";
+@import "organisms/all-products";
+@import "organisms/hero";
+@import "organisms/your_choice";
+@import "organisms/get_discount";
+@import "organisms/all-products";
 @import "organisms/your_choice";
 @import "organisms/new_in_store";
 
