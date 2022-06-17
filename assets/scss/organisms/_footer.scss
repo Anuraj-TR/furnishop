@@ -1,102 +1,101 @@
-.footer{
-    width: 100%;
-    background-color: $color-primary;
-    &__header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 30px 0;
-        border-bottom: 2px solid $color-white;
-        &__icon{
-            display: flex;
-            &__item{
-                margin: 0 5px;
-            }
-        }
+.footer {
+  width: 100%;
+  background-color: $color-primary;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 2px solid $color-white;
+    &__icon {
+      display: flex;
+      &__item {
+        margin: 0 5px;
+      }
     }
-    &__body{
-        padding: 45px 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: (-$spacer-2);
-        margin-right: (-$spacer-2);
-        &__list{
-            color: $color-white;
-            width: calc(20% - $spacer-3);
-            margin-left: $spacer-2;
-            margin-right: $spacer-2;
-            margin-bottom: $spacer-4;
-            &__head{
-                font-size: 19px;
-                font-weight: $font-semi-bold;
-                padding-bottom: 8px;
-            }
-            &__body{
-                margin-bottom: 20px;
-            }
-        }
+  }
+  &__body {
+    padding: 45px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: (-$spacer-2);
+    margin-right: (-$spacer-2);
+    &__list {
+      color: $color-white;
+      width: calc(20% - $spacer-3);
+      margin-left: $spacer-2;
+      margin-right: $spacer-2;
+      margin-bottom: $spacer-4;
+      &__head {
+        font-size: 19px;
+        font-weight: $font-semi-bold;
+        margin-bottom: $spacer-5;
+      }
+      &__body {
+        margin-bottom: $spacer-4;
+        line-height: 1.4;
+      }
     }
-    &__copy{
-        text-align: center;
-        color: $color-white;
-        font-size: 12px;
-        padding-bottom: 15px;
-    }
+  }
+  &__copy {
+    text-align: center;
+    color: $color-white;
+    font-size: 12px;
+    padding-bottom: 15px;
+  }
 }
 
-@include mobile-tablet{
-    .footer{
-        &__body{
-            &__list{
-                width: calc(33.3% - $spacer-3);
-                &__head{
-                    margin-bottom: 15px;
-                }
-                &__body{
-                    margin-bottom: 10px;
-                }
-            }
+@include mobile-tablet {
+  .footer {
+    &__body {
+      &__list {
+        width: calc(33.3% - $spacer-3);
+        &__head {
+          margin-bottom: $spacer-4;
         }
+        &__body {
+          margin-bottom: $spacer-3;
+        }
+      }
     }
+  }
 }
 
-@include mobile{
-    .footer{
+@include mobile {
+  .footer {
+    padding: 20px 0;
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 0;
+      border: none;
+      &__img {
+        margin: 0 10px;
         padding: 20px 0;
-        &__header{
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 10px 0;
-            // justify-content: flex-start;
-            border: none;
-            &__img{
-                margin: 0 10px;
-                padding: 20px 0;  
-            }
-            &__icon{
-                width: 100%;
-                justify-content: space-around;
-            }
-        }
-        &__body{
-            padding: 0 0 45px 0;
-            justify-content: flex-start;
-            &__list{
-                width: calc(50% - $spacer-3);
-                color: $color-white;
-                // line-height: 40px;
-                padding: 15px 23px;
-                &__head{
-                    margin-bottom: 15px;
-                }
-                &__body{
-                    margin-bottom: 10px;
-                }
-            }
-        }
-        &__copy{
-            padding-top: 30px;
-        }
+      }
+      &__icon {
+        width: 100%;
+        justify-content: space-around;
+      }
     }
+    &__body {
+      padding: 0 0 45px 0;
+      justify-content: flex-start;
+      &__list {
+        width: calc(50% - $spacer-3);
+        color: $color-white;
+        // line-height: 40px;
+        padding: 15px 23px;
+        &__head {
+          margin-bottom: $spacer-4;
+        }
+        &__body {
+          margin-bottom: $spacer-3;
+        }
+      }
+    }
+    &__copy {
+      padding-top: 30px;
+    }
+  }
 }
-
